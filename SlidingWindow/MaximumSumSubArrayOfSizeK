@@ -7,6 +7,7 @@ Constraints:-
 1 <= k <= n
 -10^9 <= arr[i] <= 10^9
 
+
 Input format:-
 First line contains the integer n.
 Second line contains n space-separated integers, denoting the array elements
