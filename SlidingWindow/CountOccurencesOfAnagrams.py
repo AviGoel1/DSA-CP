@@ -24,19 +24,23 @@ from collections import Counter
 
 k = len(pat)
 hmap = Counter(pat)
+matched = 0
 ws = we = 0
 count = 0
-curr = {}
 while we < len(txt):
-  curr[txt[we]] = curr.get(txt[we],0) + 1
-  if we - ws + 1 > k:
-    curr[txt[ws]] -= 1
-  if curr[txt[ws]] == 0:
-    del curr[txt[ws]]
-	  ws += 1
+	if hmap.get(txt[we],None) != None:
+		hmap[txt[we]] -= 1
+		if hmap[txt[we]] == 0:
+			matched += 1
+	if we - ws + 1 > k:
+		if hmap.get(txt[ws],None) != None:
+			hmap[txt[ws]] += 1
+		if hmap[txt[ws]] == 1:
+			matched -= 1
+		ws += 1
 	if we - ws + 1 == k:
-	  if len(curr) == len(hmap) and curr == hmap:
-	    count += 1
+		if matched == len(hmap):
+			count += 1
 	we += 1
 return count
 
