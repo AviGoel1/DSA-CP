@@ -1,3 +1,6 @@
+# Gfg Problem Link:- https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x2041/1/
+# Leetcode Link:- https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+
 def last(arr,l,h,x):
   """ Here we are checking if element exists in upper half, if it is already found at an index. """
   res = -1
