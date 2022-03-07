@@ -12,7 +12,7 @@ def last(arr,l,h,x):
       h = m - 1
   return res
     
-def first(self,arr,l,h,x):
+def first(arr,l,h,x):
   """ Here we are checking if element exists in lower half, if it is already found at an index. """
   res = -1
   while l <= h:
