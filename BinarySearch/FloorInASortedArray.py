@@ -23,7 +23,7 @@ def findFloor(arr,n,key):
         else:
             l = mid+1
     if l-1 == -1:
-        return arr[l] - 1
+        return "Floor of x is not present in array"
     return arr[l-1]
 
 n = int(input())
