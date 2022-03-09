@@ -8,7 +8,7 @@ TestCase:-
 3
 
 Output:-
-1 (Index of element of floor of x)
+2 (floor of x)
 """
 
 def findFloor(arr,n,key):
@@ -17,12 +17,14 @@ def findFloor(arr,n,key):
     while l<=h:
         mid = l + (h-l)//2
         if arr[mid] ==  key:
-            return mid
+            return arr[mid]
         elif arr[mid] > key:
             h = mid-1
         else:
             l = mid+1
-    return l-1
+    if l-1 == -1:
+        return arr[l] - 1
+    return arr[l-1]
 
 n = int(input())
 arr = list(map(int,input().split()))
